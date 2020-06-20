@@ -1,0 +1,34 @@
+Convolution filter explorations
+
+Name: Matthew Corfiatis
+Username: CorfiaMatt
+ID: 300447277
+
+I tried 8 different convolution filters in total (I included the files for each), some were 3x3 and some were 5x5.
+Here is a list of the filters and what the results of each one was:
+
+1. 5x5 Bokeh:
+The effect of this filter seems to basically just blur the image, though it is quite a strong blur compared to the box and guassian blurs.
+
+2. 3x3 Box blur:
+A resonably simple blur filter, though it doesn't blur as much as I expected it to initially.
+
+3. 3x3 Emboss:
+Seems to increase the contrast of the image and also increase the sharpness of edges in the image.
+
+4. 3x3 Edge detect:
+I found this filter quite interesting, and it seems to have many real world applications. The main issue with this filter is that the edges arent very consistent and there are sometimes small gaps or noise in the lines.
+The sobel filters below aim to remedy this issue by combining edge detection with a smoothing effect, this may be more useable for image recognition applications.
+
+5. 5x5 Gaussian blur:
+I don't really notice much difference between this filter and the 3x3 box filter. I noticed it uses pascals triangle in the filter values though, maybe its supposed to be a smoother/more "natural" blur?
+
+6. 3x3 Sharpen:
+This filter appears to somehow get data from nothing by "unbluring" images. Though when you look closer you see lots of artifacts, and detail lost because it just adds gain to edges in the image.
+
+7. 3x3 Sobel horizontal edge detection:
+This is similar to the 3x3 edge detection filter except it only detects horizontal lines, and it makes the lines it detects much more clear. The detected lines are much thicker and smoother than the ones produced by the 3x3 edge detection filter. I think this filter in combination with the vertical sobel filter would be more useful for basic image recognition programs.
+
+8. 3x3 Sobel vertical edge detection:
+This filter is the same as the horizontal variant except it detects vertical lines.
+Both filters appear to detect roughly up to a pi/4 radian angle.
